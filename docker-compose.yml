@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+
+  golang:
+#    build: ./build
+    image: golang:1.20
+    container_name: golang
+    restart: always
+    tty: true
+    volumes:
+      - ./build/source:/go/tmp/src
+
+# docker-compose exec golang gofmt hello.go
+# docker-compose exec golang go run hello.go
